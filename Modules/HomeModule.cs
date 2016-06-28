@@ -23,7 +23,8 @@ namespace JobList
         return View["job_form.cshtml"];
       };
       Post["/jobs"] = _ => {
-        Job newJob = new Job(Request.Form["new-title"], Request.Form["new-description"], Request.Form["new-contact"]);
+        Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-email"], Request.Form["new-phonenum"]);
+        Job newJob = new Job(Request.Form["new-title"], Request.Form["new-description"], newContact);
         List<Job> AllJobs = Job.GetAll();
         return View["jobs.cshtml", AllJobs];
       };

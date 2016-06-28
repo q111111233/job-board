@@ -6,11 +6,11 @@ namespace JobList.Objects
   {
     private string _title;
     private string _description;
-    private string _contact;
+    private Contact _contact;
     private int _id;
     private static List<Job> _jobs = new List<Job> {};
 
-    public Job (string title, string description, string contact)
+    public Job (string title, string description, Contact contact)
     {
       _title = title;
       _description = description;
@@ -34,11 +34,11 @@ namespace JobList.Objects
     {
       _description = newDescription;
     }
-    public string GetContact()
+    public Contact GetContact()
     {
       return _contact;
     }
-    public void SetContact(string newContact)
+    public void SetContact(Contact newContact)
     {
       _contact = newContact;
     }
