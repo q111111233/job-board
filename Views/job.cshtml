@@ -1,8 +1,10 @@
 <h1>@Model.GetTitle()</h1>
 <p>Description:</p>
 <p>@Model.GetDescription()</p>
-<p>Contact Information:</p>
+<h3>Contact Information:</h3>
 <p>@Model.GetContact().GetName()</p>
+<p>@Model.GetContact().GetEmail()</p>
+<p>@Model.GetContact().GetPhonenum()</p>
 
 <a href='/jobs/new'>Add another job</a>
 <a href='/jobs'>View all jobs</a>
